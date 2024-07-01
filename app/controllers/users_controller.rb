@@ -10,7 +10,7 @@ class UsersController < ApplicationController
         render_not_found_response
       end
     else
-     render json: { errors: ['User Not Found'] }, status: 404
+      render json: { errors: ['User Not Found'] }, status: 404
     end
   end
 
@@ -79,11 +79,11 @@ class UsersController < ApplicationController
   end
 
   def find_user
-    user = User.find(params[:id])
+    User.find(params[:id])
   end
 
   def user_params
-    params.permit(:username, :email, :password, :picture, :bio)
+    params.permit(:username, :email, :password, :picture, :bio, :role)
   end
 
   def generate_avatar_url(username)
