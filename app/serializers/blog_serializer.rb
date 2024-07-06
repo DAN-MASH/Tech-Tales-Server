@@ -15,7 +15,7 @@ class BlogSerializer < ActiveModel::Serializer
     object.user.bio
   end
   def author_socials
-    object.user.socials
+    object.user.social_media
   end
 def user_avatar
 object.user.picture
